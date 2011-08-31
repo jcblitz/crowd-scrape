@@ -1,0 +1,401 @@
+/* Form related styles */
+
+ul.bullets
+{
+    list-style-type: square;
+    margin-left: 30px;
+}
+
+input.long
+{
+    width: 300px;
+}
+
+.vertical-options
+{
+    margin-left: 15px;
+}
+
+.vertical-option-description
+{
+    margin-left: 25px;
+    font-size: 90%;
+    color: #7f7f7f;
+}
+
+.vertical-option-content
+{
+    margin-left:30px;
+    margin-top:5px;
+    display: none;
+}
+
+
+/* Form tags */
+optgroup {
+    background-color: #f7f7f7;
+    font-weight: normal;
+    color: #666;
+}
+
+optgroup option {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.miniform {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    margin-left: 2px;
+}
+
+/* Dialog text sizing */
+#manageEntity p {
+    font-size: 90%;
+    margin: 10px;
+}
+
+#entity-details td {
+    font-size: 90%;
+}
+
+/* Bamboo Form */
+.crowdForm {zbackground: #F5F8FB; zborder: 1px solid #BBD0E5; clear: both; padding: 0; width: 100%;}
+
+.crowdForm .formBodyNoTop {
+    margin: 0 5px 5px 5px;
+}
+
+.crowdForm .formBody {
+    margin: 0;
+}
+
+.crowdForm .formTitle h2 {
+    margin-bottom: 0;
+}
+
+.crowdForm .formTable {
+    float: left;
+    clear: both;
+    margin: 3px 4px 15px 4px;
+    width: 780px;
+}
+
+.tabContent .crowdForm {
+/*margin-top: 50px;*/
+}
+
+#tabContainer .tabContent .crowdForm {
+/*margin: 10px 5px 10px 5px;*/
+    width: 99%;
+}
+
+/* Form header */
+z.crowdForm h2 {
+    border-top: none; /*margin-bottom: 15px;*/
+}
+
+/* Style for subsection*/
+.crowdForm .titleSection, .crowdForm h3 {
+    border-top: 1px solid #BBD0E5;
+    border-bottom: 1px solid #BBD0E5;
+    background-color: #EBF1F7;
+    color: #003366;
+    font-weight: bold;
+    padding: 4px 4px 4px 10px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+.crowdForm .sectionSubTitle{
+    border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
+    background-color: #F0F0F0;
+    color: #000000;
+    font-weight: bold;
+    padding: 4px 4px 4px 10px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+.crowdForm h3.title {
+    border-top: none;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.crowdForm p {
+    margin: 10px; /*margin-left: 10px;*/
+/*margin-right: 10px;*/
+/*margin-bottom: 5px;*/
+}
+
+/* Used for field label separtion e.g. OR */
+.crowdForm .sectionSubHeader {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Sub area h1 */
+.crowdForm .crowdForm h1 {
+    font-size: 16px;
+}
+
+.crowdForm .descriptionSection {
+    padding: 4px;
+    margin-left: 1em;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.crowdForm .formFooter {
+    clear: both;
+    padding: 5px 5px 15px 5px;
+    border-bottom: 1px solid #BBD0E5;
+    zbackground-color: #EBF1F7;
+}
+
+.crowdForm .formFooter.wizardFooter {
+    ztext-align: right;
+    padding:  1em 0 1em 15em;
+}
+
+.crowdForm .formFooter.wizardFooter #cancelButton {
+    margin-left: 10px;
+}
+
+.crowdForm .fieldAreaError {
+}
+
+.crowdForm .fieldArea .errorBox {
+    color: #cc0000;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.crowdForm .fieldArea {
+    clear: left;
+    margin: 0 0 0 13px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.crowdForm .fieldArea label.fieldLabelArea, .crowdForm .fieldArea .firstColumn {
+    display: inline;
+    position: relative;
+    float: left;
+    margin-top: 0.15em;
+    padding: 0 0 5px 0;
+}
+
+.crowdForm .fieldArea .fieldValueArea {
+}
+
+.fieldDescription {
+    margin: 3px 0 0 0;
+    padding: 0 0 5px 0;
+    font-size: 90%;
+    color: #7F7F7F;
+}
+
+/* Special styles for checlbox*/
+
+.crowdForm label.labelForCheckbox, .crowdForm .checkboxArea .fieldDescription {
+    float: none;
+    display: block;
+    padding: 0px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.crowdForm .checkboxLabel {
+}
+
+.crowdForm .checkboxErrorLabel {
+    color: red;
+}
+
+.crowdForm span.required {
+    color: red;
+}
+
+.crowdForm .fieldLabelArea .required {
+    position: absolute;
+    top: 0;
+    height: 8px;
+    margin: 0 0 0 -4px;
+    vertical-align: top;
+}
+
+.crowdForm .formFooter .buttons {
+/*margin-left: 30%;*/
+}
+
+.textFieldButton {
+    text-align: right;
+    padding-bottom: 5px;
+}
+
+input.textField, textarea.textField {
+    width: 85%;
+    border: 1px #bbbbbb solid;
+    padding: 3px;
+}
+
+input.textField:focus, textarea.textField:focus {
+    border: 1px #BBD0E5 solid;
+}
+
+.crowdForm ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.directory-list {
+    float: left;
+    width: 200px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.permission-list {
+    float: right;
+    width: 500px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.permission-list input {
+    float: left;
+}
+
+.permission-list label {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.disabled {
+    color: #7F7F7F;
+}
+
+.permission-description {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    font-size: 90%;
+    color: #7F7F7F;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.directory-list option:hover {
+    background-color: #f5f8fb;
+}
+
+.directory-list option {
+    font-size: 1.1em;
+    text-indent: 3px;
+    padding: 5px;
+}
+
+.directory-select {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.crowdForm .fieldLabelArea {margin: 0 1em 0 0; width: 13em;}
+.crowdForm .fieldValueArea {}
+.crowdForm .fieldDescription {margin: 0 0 0 14em;}
+.crowdForm .fieldLabelArea .required {left: 13em;}
+crowdForm .fieldValueArea ol.selectedGroups {margin: 0 0 0 13em;}
+
+/* ---------------------------------------------------------------------------------------------------------- Specifics */
+.crowdForm #artifacts {
+    margin: 0 auto 0 auto;
+    width: auto;
+
+}
+
+/* ---------------------------------------------------------------------------------------------------------- Form end */
+
+#adminMenu {
+    float: left;
+    width: 170px;
+    margin-left: -15px;
+    margin-top: -10px;
+}
+
+/*********************************************/
+/* Web Menu                                  */
+/*********************************************/
+.webMenu {
+    clear: both;
+    margin: 0 15px 0 15px;
+    padding: 10px 0 90px 0;
+}
+
+.webMenuSection {
+    display: inline;
+    float: left;
+    width: 170px;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.webMenuSection ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.webMenuSection li {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+    background-color: #D8E4F0;
+}
+
+.webMenuSection h2 {
+    border: 0 none #FFFFFF;
+    padding: 3px 10px;
+    background-color: #EBF1F7;
+    background-repeat: no-repeat;
+    background-position: 93% 6px;
+    font-size: 100%;
+}
+
+.webMenuSection img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul.webMenuItem {
+    margin-bottom: 5px;
+    display: block;
+    color: #003366;
+    text-decoration: none;
+    list-style: none;
+}
+
+ul.webMenuItem a:hover {
+    background-color: #C4D6E9;
+}
+
+ul.webMenuItem a {
+    display: block;
+    zoom: 1;
+    padding: 5px 7px 5px 20px;
+    color: #003366;
+    text-decoration: none;
+}
+

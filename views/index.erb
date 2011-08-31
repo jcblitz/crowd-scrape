@@ -1,10 +1,28 @@
-<h2>Enter a name to search for</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<form action="/" name="search_form" method="get">
-<label for="username">Name:</label>
-<input type="text" name="username" id="username" />
-<input type="submit" name="submit" value="Submit" />
-</form>
-<% @user_tables.each do |table| %>
-  <%= table %>
-<% end %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+
+    <title>Conforming XHTML 1.0 Strict Template</title>
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="/stylesheets/layout.css"/>
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="/stylesheets/forms.css"/>
+  </head>
+
+  <body>
+
+    <h2>Enter a name to search for</h2>
+
+    <form action="/" name="search_form" method="get">
+      <label for="username">Name:</label>
+      <input type="text" name="username" id="username" />
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+
+    <% @user_tables.each do |table| %>
+      <%= table %>
+    <% end %>
+
+  </body>
+</html>
