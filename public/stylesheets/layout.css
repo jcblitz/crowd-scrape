@@ -632,7 +632,7 @@ p.moreLink a {
 table {
     border-bottom: 1px solid #CCCCCC;
     border-collapse: collapse;
-    margin: 15px 0 0;
+    margin: 0 0 15px 0; 
     width: 100%;
 }
 .members-table {

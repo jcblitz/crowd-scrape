@@ -5,7 +5,7 @@
 
   <head>
 
-    <title>Conforming XHTML 1.0 Strict Template</title>
+    <title>Crowd lookup</title>
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/stylesheets/layout.css"/>
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/stylesheets/forms.css"/>
   </head>
@@ -16,13 +16,27 @@
 
     <form action="/" name="search_form" method="get">
       <label for="username">Name:</label>
-      <input type="text" name="username" id="username" />
+      <input type="text" name="username" id="username" value="<%=params[:username]%>"/>
       <input type="submit" name="submit" value="Submit" />
     </form>
 
-    <% @user_tables.each do |table| %>
+    <% @user_tables.each_with_index do |table, i| %>
+      <% 
+        directory = "" 
+        case LoginNav::DIRECTORIES[i] 
+        when 5
+          directory = "GSI"
+        when 6
+          directory = "ISH"
+        when 9
+          directory = "SysIQ"
+        else
+          directory = "I'm not sure"
+        end
+      %>
+      <h3><%= directory %></h3>      
       <%= table %>
     <% end %>
-
+  <%=  %>
   </body>
 </html>
