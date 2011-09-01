@@ -15,8 +15,8 @@
       <input type="submit" name="submit" value="Submit" />
     </form>
     <% @user_tables.each_with_index do |table, i| %>
-      <h3><%= LoginNav::DIRECTORY_NAMES[i] %></h3>      
-      <%= table %>
+      <h3><%= table.name %></h3>      
+      <%= table.table_data %>
     <% end %>
   </body>
 </html>
