@@ -7,5 +7,9 @@ module VariablesModule
   DROPDOWNS << DropdownEntry.new("New York Office", 1)
 
   #This is the base url for your crowd installation. Something like http://crowd.mycompany.com
-  BASE_URL = ""
+  BASE_URL = "http://crowd.mycompany.com"
+
+  # Login/Password used to access crowd. By default, I use a system variable for this
+  J_USERNAME = ENV["LDAP_USERNAME"] 
+  J_PASSWORD = ENV["LDAP_PASSWORD"]
 end
