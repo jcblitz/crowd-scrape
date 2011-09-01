@@ -1,0 +1,4 @@
+1.0
+	+ Initial public release of this code
+	+ Moved any runtime specific configuration to a VariablesModule so other
+	people can use this and only have to modify one file
