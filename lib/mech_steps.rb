@@ -10,8 +10,6 @@ end
 
 class MechSteps 
   attr_accessor :agent, :dropdown_entries
-  J_USERNAME = ENV["LDAP_USERNAME"] 
-  J_PASSWORD = ENV["LDAP_PASSWORD"]
 
   def initialize(agent, dropdown_entries)
     @agent = agent
@@ -21,8 +19,8 @@ class MechSteps
   def login
     page = self.agent.get("#{VariablesModule::BASE_URL}/crowd/console/login.action")
     login_form = page.form("login")
-    login_form.j_username = J_USERNAME
-    login_form.j_password = J_PASSWORD
+    login_form.j_username = VariablesModule::J_USERNAME
+    login_form.j_password = VariablesModule::J_PASSWORD
 
     login_result = self.agent.submit(login_form, login_form.buttons.first)
   end

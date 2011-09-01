@@ -1,0 +1,37 @@
+h1. Crowd-Scrape
+
+When working with multiple companies around the world, it's not always easy to figure out who a username belongs to. There are multiple formats, different conventions, etc. If your company is using "Crowd":http://www.atlassian.com/software/crowd/ , one way to figure this out is by using the "User Search" mechanism in the web interface. However, this can be tedious if you have multiple directories configured, it's a couple of clicks and a lot of remembering if people have similar names. 
+
+h2. Enter Crowd-Scrape
+
+I wanted a way that I could search all of the directories I wanted with a single input and a single response. My first stop was to look at the API, which it doesn't appear to support searching. My next thought was to use a screen scraper...so I did. Crowd-Scrape was born.
+
+h2. Configuration 
+
+I wrote this using "Sinatra":http://www.sinatrarb.com/ and "Mechanize":http://mechanize.rubyforge.org/Mechanize.html, both Ruby gems. To make this work for your situation, you'll put your specific information in lib/VariablesModule.rb. 
+
+I've commented each of the entries, hopefully they're self explanatory 
+<code>
+DROPDOWNS = []
+# Add an instance of DropdownEntry for every "Directory" you want to search in crowd. For example:
+# DROPDOWNS << DropdownEntry.new("New York Office", 1)
+# This is saying select the 1st dropdown position and call it "New York Office"
+# Create an entry for each directory you want to search. The first field is a display label when showing results and the second numeric field is the position in the dropdown menu. Do not forget 0 is actually the first entry.
+DROPDOWNS << DropdownEntry.new("New York Office", 1)
+
+#This is the base url for your crowd installation. Something like http://crowd.mycompany.com
+BASE_URL = "http://crowd.mycompany.com"
+
+# Login/Password used to access crowd. By default, I use a system variable for this
+J_USERNAME = ENV["LDAP_USERNAME"] 
+J_PASSWORD = ENV["LDAP_PASSWORD"]
+
+</code>
+
+After you have configured your settings you can start Sinatra however you would normally. If you typically do "ruby main.rb", that's fine. 
+
+h2. Caveats 
+
+This has only been tested with Crowd 2.0.4. Since it uses screen scraping, if they layout changes in newer releases (more specifically the field ids), it's possible this will not work. If that is the case, please contact me and we can work on an adapter.
+
+At least with my testing, Crowd seems to not reply every once in a while. If that happens, Crowd-Scrape will throw an error saying it timed out. No big deal, just try it again.
