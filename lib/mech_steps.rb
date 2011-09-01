@@ -12,11 +12,6 @@ class MechSteps
   attr_accessor :agent, :dropdown_entries
   J_USERNAME = ENV["LDAP_USERNAME"] 
   J_PASSWORD = ENV["LDAP_PASSWORD"]
-  BASE_URL = "http://crowd.tools.us.gspt.net"
-
-  #Keep the two arrays inline, the first is the actual position in the dropdown to select the directory, the second is for displaying it on the front end. I'll move this to an object if it gets any more complicated.
-  DIRECTORIES = [5, 6 ,9]
-  DIRECTORY_NAMES = ["GSI", "ISH", "SysIQ"]
 
   def initialize(agent, dropdown_entries)
     @agent = agent
@@ -24,7 +19,7 @@ class MechSteps
   end
 
   def login
-    page = self.agent.get("#{BASE_URL}/crowd/console/login.action")
+    page = self.agent.get("#{VariablesModule::BASE_URL}/crowd/console/login.action")
     login_form = page.form("login")
     login_form.j_username = J_USERNAME
     login_form.j_password = J_PASSWORD
@@ -56,7 +51,7 @@ class MechSteps
   end
 
   def search_each(term, dropdown_entry)
-    page = self.agent.get("#{BASE_URL}/crowd/console/secure/user/browse.action")
+    page = self.agent.get("#{VariablesModule::BASE_URL}/crowd/console/secure/user/browse.action")
     search_form = page.form("searchusers")
     search_form.search = term
     search_form.field_with(:name => 'directoryID').options[dropdown_entry.dropdown_index].select

@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/stylesheets/forms.css"/>
   </head>
   <body>
-    <h2>Enter a name to search for</h2>
+    <h2>Enter a name to search for:</h2>
     <form action="/" name="search_form" method="get">
       <label for="username">Name:</label>
       <input type="text" name="username" id="username" value="<%=params[:username]%>"/>
       <input type="submit" name="submit" value="Submit" />
     </form>
-    <% @user_tables.each_with_index do |table, i| %>
+    <% @user_tables.each do |table| %>
       <h3><%= table.name %></h3>      
       <%= table.table_data %>
     <% end %>
